@@ -26,7 +26,13 @@ const Counter = () => {
    }
 
    const handledDecreament = () => {
-    setState(state - 1);
+     if (state > 0) {
+         setState(state - 1);
+         }
+   }
+      
+   const reset = () => {
+    setState(0);
    }
 
     return (
@@ -38,6 +44,9 @@ const Counter = () => {
         </button>
         <button onClick={handledDecreament}>
             Click Me to Decreae the Component state
+        </button>
+                <button onClick={reset}>
+            Reset Counter
         </button>
 
       </div>

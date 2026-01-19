@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+.app {
+  padding: 20px;
+}
+
+.box {
+  border: 2px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}

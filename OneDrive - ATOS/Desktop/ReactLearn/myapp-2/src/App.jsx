@@ -6,6 +6,7 @@ import Greetings from './component/Greetings'
 import { MultipleGreetings } from './component/Greetings'
 import HookPractice from './component/HookPractice'
 import UsersPage from './component/UsersPage'
+import LoginPage from './component/LoginPage'
 
 function App() {
 
@@ -38,6 +39,11 @@ function App() {
       <section className="box">
         <h2>CRUD Operations</h2>
         <UsersPage />
+      </section>
+
+        <section className="box">
+        <h2> Login Screen</h2>
+        <LoginPage />
       </section>
 
     </div>

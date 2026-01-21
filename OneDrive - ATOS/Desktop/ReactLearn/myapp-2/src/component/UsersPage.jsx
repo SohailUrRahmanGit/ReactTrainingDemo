@@ -12,16 +12,15 @@ const handlePrevious = () => {
         if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     }
-    };
-
+};
     
-  const handleNext = () => {
+const handleNext = () => {
     if (currentIndex < users.length - 1) {
       setCurrentIndex(currentIndex + 1);
     }
   };
 
-   const handleInputChange = (e) => {
+const handleInputChange = (e) => {
     const { name, value } = e.target;
     setEditData(prev => ({
       ...prev,
@@ -29,7 +28,7 @@ const handlePrevious = () => {
     }));
   };
 
-  const handleSave = () => {
+const handleSave = () => {
     const updatedUsers = [...users];
     updatedUsers[currentIndex] = { ...currentUser, ...editData };
     setUsers(updatedUsers);
@@ -37,7 +36,7 @@ const handlePrevious = () => {
     setEditData({});
   };
 
-  const handleCancel = () => {
+const handleCancel = () => {
     setEditData({});
   };
 
@@ -56,7 +55,8 @@ const handlePrevious = () => {
 
     fetchUsers(); 
   }, []); 
-return (
+
+ return (
     <div>
       <h3>User Page</h3>
 

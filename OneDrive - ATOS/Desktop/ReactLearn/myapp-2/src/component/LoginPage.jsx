@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 const LoginPage = () => {
 
@@ -21,7 +21,11 @@ const heavyUsernameCheck = () => {
   return username.length >= 5;
 };
 
-const isUsernameValid = heavyUsernameCheck();
+// const isUsernameValid = heavyUsernameCheck();
+
+const isUsernameValid = useMemo(() => {
+  return heavyUsernameCheck();
+},[username]);
 
 const updateUserName = (e) => {
   setUsername(e.target.value);

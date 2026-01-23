@@ -7,12 +7,36 @@ import { MultipleGreetings } from './component/Greetings'
 import HookPractice from './component/HookPractice'
 import UsersPage from './component/UsersPage'
 import LoginPage from './component/LoginPage'
+import Login from './component/Login'
+import SomeInput from './component/SomeInput'
+
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import ToDoList from './component/routerExample/ToDoList'
+import HomePage from './component/routerExample/HomePage'
+import About from './component/routerExample/About'
 
 function App() {
 
   return (
     <div className="app">
-      <h1>React JS Learning</h1>
+      <h1>React JS Learning & Practice</h1>
+
+      <section className="box">
+  <BrowserRouter> <h2> Routing Practice </h2>
+      <nav>
+        <Link to="/">Home</Link> {" "}{" "}
+        <Link to="/todo">To-Do</Link> {" "}{" "}
+        <Link to="/about">About</Link>
+      </nav>
+
+     <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/todo" element={<ToDoList />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+  </BrowserRouter>
+
+      </section>
 
       <section className="box">
         <h2>Counter</h2>
@@ -44,6 +68,16 @@ function App() {
         <section className="box">
         <h2> Login Screen</h2>
         <LoginPage />
+      </section>
+
+        <section className="box">
+        <h2> Login Form with Reusable Form</h2>
+        <Login />
+      </section>
+
+              <section className="box">
+        <h2> Target Component </h2>
+        <SomeInput />
       </section>
 
     </div>
